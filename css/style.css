@@ -43,7 +43,7 @@ img {
 
 #first_main_section {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     justify-items: center;
     align-items: center;
     margin-top: 10vh;
@@ -53,8 +53,8 @@ img {
 }
 
 #first_main_section_img {
-    width: 350px;
-    height: 500px;
+    width: 30vw;
+    height: 50vh;
     border-radius: 5px;
     object-fit: cover;
     justify-self: end;
@@ -109,4 +109,35 @@ img {
     align-items: center;
     justify-items: center;
     margin-top: -50px;
+}
+
+#fourth_main_section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    row-gap: 20px;  
+    column-gap: 20px;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    justify-items: center;
+    align-items: center;
+    margin-top: -40px;
+}
+
+.fourth_main_section_div {
+    border: 5px solid; /* As 4 bordas sólidas com 25px de espessura */
+    border-color: rgb(255, 255, 255) rgb(255, 255, 255) #f00 rgb(255, 255, 255); /* cores: topo, direita, inferior, esquerda */
+    padding: 5px;
+    background-color: rgb(240, 221, 221);
+    width: 40%;
+    border-radius: 10px;
+}
+
+#footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    margin-top: 5vh;
+    background-color: rgb(230, 230, 230);
+    border-color: rgb(255, 255, 255) rgb(255, 255, 255) #f00 rgb(255, 255, 255); /* cores: topo, direita, inferior, esquerda */
 }
