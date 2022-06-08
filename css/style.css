@@ -55,12 +55,21 @@ img {
     align-items: center;
 }
 
+#first_main_section {
+    background-image: url(/img/pexels-photo-905847.webp);
+    width: 100vw;
+    height: 50vh;
+    background-size: cover;
+    margin-top: 20px;
+}
+
+/*
 #first_main_section_img {
     width: 100vw;
     height: 50vh;
     object-fit: cover;
     margin-top: 20px;
-}
+}*/
 
 #first_main_section_h1 {
     display: grid;
