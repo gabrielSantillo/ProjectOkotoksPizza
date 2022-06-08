@@ -251,6 +251,12 @@ img {
         justify-self: end;
         margin-left: 5vw;
     }
+
+    #third_main_section {
+        height: 500px;
+        width: 60vw; /*why using the vw its still scrolling? */
+        background-position: start;
+    }
 }
 
 @media only screen and (min-width: 1080px) {
@@ -288,8 +294,9 @@ img {
     }
 
     #third_main_section {
-        height: 500px;
-        width: 60vw; /*why using the vw its still scrolling? */ background-position: start;
+        height: 700px;
+        width: 50vw; /*why using the vw its still scrolling? */
+        background-position: start;
     }
 
     #fourth_main_section {
