@@ -73,6 +73,7 @@ img {
 
 #first_main_section_h1>p {
     justify-self: center; /* FIRST QUESTION: HOW TO CENTRALIZE*/
+    margin-top: 20px;
 }
 
 #second_main_section {
@@ -194,6 +195,20 @@ img {
     margin-top: -40px;
 }*/
 
+#second_footer_section {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 50px;
+}
+
+.second_footer_section_img {
+    height: 10vh;
+    object-fit: cover;
+    justify-self: end;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
 #page_footer {
     display: grid;
     min-height: 80px;
@@ -201,6 +216,8 @@ img {
     align-items: center;
     justify-items: center;
     padding: 10px;
-    margin-top: 20px;
+    margin-top: 50px;
     background-color: rgb(244, 244, 244);
+    border: 2px solid; 
+    border-color: rgb(0, 0, 0) rgb(244, 244, 244) rgb(244, 244, 244) rgb(244, 244, 244); 
 }
