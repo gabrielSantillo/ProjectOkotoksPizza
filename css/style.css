@@ -18,7 +18,7 @@ img {
 #page_header {
     display: grid;
     min-height: 50px;
-    grid-template-columns: 2fr 1fr;
+    grid-auto-flow: column;
     align-items: center;
     justify-items: center;
     margin-top: 10px;
@@ -31,11 +31,6 @@ img {
     border-radius: 22.5px;
     margin-left: 15px;
     justify-self: start;
-}
-
-#nav_header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
 }
 
 .a_nav_header {
@@ -57,7 +52,7 @@ img {
 
 #first_main_section {
     background-image: url(/img/pexels-photo-905847.webp);
-    width: 100vw;
+    width: 100%;
     height: 50vh;
     background-size: cover;
     margin-top: 20px;
@@ -65,7 +60,7 @@ img {
 
 /*
 #first_main_section_img {
-    width: 100vw;
+    width: 100%;
     height: 50vh;
     object-fit: cover;
     margin-top: 20px;
@@ -82,7 +77,6 @@ img {
 
 #first_main_section_h1>p {
      /* FIRST QUESTION: HOW TO CENTRALIZE*/
-    
     margin-top: 20px;
 }
 
@@ -93,16 +87,14 @@ img {
 }
 
 #second_main_section_img_one {
-    width: 100px;
-    height: 300px;
+    width: 30vw;
+    height: 70vw;
     object-fit: cover;
-    justify-self: end;
-    margin-right: 5vw;
     margin-top: 50px;
 } 
 
 #second_main_section_img_two {
-    width: 300px;
+    width: 60vw;
     height: 70vh;
     object-fit: cover;
     justify-self: end;
@@ -111,16 +103,15 @@ img {
 
 #third_main_section {
     background-image: url(/img/chef-pizza.webp);
-    height: 500px;
-    width: 100vw; /*why using the vw its still scrolling? */
+    height: 90vh;
+    width: 95vw; /*why using the its still scrolling? */
     background-position: center;
     display: grid;
     grid-auto-flow: row;
     justify-content: start;
     align-items: start;
-    padding: 20px;
     background-size: cover;
-    margin-top: 80px;
+    margin-top: 150px;
     border-radius: 300px;
 }
 
@@ -149,7 +140,7 @@ img {
     border: 5px solid; 
     border-color: rgb(255, 255, 255) rgb(255, 255, 255) #f00 rgb(255, 255, 255); 
     background-color: rgb(240, 221, 221);
-    width: 100px;
+    width: 90px;
     border-radius: 10px;
     padding: 2px;
     margin-top: -50px;
@@ -213,15 +204,13 @@ img {
 
 #page_footer {
     display: grid;
-    min-height: 80px;
-    width: 100vw;
-    grid-template-columns: 1fr;
+    min-height: 30vh;
+    width: 100%;
     align-items: center;
     justify-items: center;
-    padding: 10px;
     margin-top: 50px;
     background-color: rgb(244, 244, 244);
-    border: 2px solid; 
+    border-top: 2px solid; 
     border-color: rgb(0, 0, 0) rgb(244, 244, 244) rgb(244, 244, 244) rgb(244, 244, 244); 
 }
 
@@ -245,33 +234,39 @@ img {
     }
 
     #second_main_section_img_one {
-        width: 300px;
-        height: 500px;
+        width: 40vw;
+        height: 50vh;
         object-fit: cover;
         justify-self: end;
-        margin-right: 5vw;
         margin-top: 50px;
     } 
 
     #second_main_section_img_two {
-        width: 500px;
-        height: 700px;
+        width: 50vw;
+        height: 70vh;
         object-fit: cover;
         justify-self: end;
         margin-left: 5vw;
     }
 
     #third_main_section {
-        height: 500px;
-        width: 60vw; /*why using the vw its still scrolling? */
-        background-position: start;
+        height: 70vh;
+        width: 80vw; /*why using the vw its still scrolling? */
+    }
+
+    .fourth_main_section_div {
+        width: 15vw;
+    }
+
+    #page_footer {
+        height: 30vh;
     }
 }
 
 @media only screen and (min-width: 1080px) {
     #second_main_section_img_one {
-        width: 350px;
-        height: 550px;
+        width: 25vw;
+        height: 40vh;
         object-fit: cover;
         justify-self: start;
         margin-right: 5vw;
@@ -279,11 +274,8 @@ img {
     } 
 
     #second_main_section_img_two {
-        width: 500px;
-        height: 700px;
-        object-fit: cover;
-        justify-self: end;
-        margin-left: 5vw;
+        width: 45vw;
+        height: 70vh;
     }
 
     #img_header {
@@ -296,7 +288,7 @@ img {
     }
 
     #first_main_section_img {
-        width: 100vw;
+        width: 100%;
         height: 600px;
         object-fit: cover;
         margin-top: 20px;
@@ -304,7 +296,7 @@ img {
 
     #third_main_section {
         height: 700px;
-        width: 50vw; /*why using the vw its still scrolling? */
+        width: 50vw; 
         background-position: start;
     }
 
@@ -314,6 +306,11 @@ img {
 
     .fourth_main_section_div {
         width: 150px;
+    }
+
+    #first_main_section {
+        height: 90vh;
+        background-position: center;
     }
     
 }
