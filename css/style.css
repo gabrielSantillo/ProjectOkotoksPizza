@@ -1,3 +1,55 @@
+@keyframes fontGrowing {
+    0% {
+        font-size: 30px;
+    background-color: rgb(126, 58, 58);
+    }
+    50% {
+        font-size: 30px;
+    background-color: rgb(150, 126, 55);
+    }
+    100% {
+        font-size: 30px;
+    background-color: rgb(30, 30, 65);
+    }
+}
+
+@keyframes titleEmphasis {
+    0% {
+        font-size: 30px;
+        background-color: rgb(0, 0, 0);
+    }
+    50% {
+       font-size: 30px;
+       background-color: rgb(255, 255, 255);
+    }
+    100% {
+      font-size: 30px;
+      background-color: rgb(0, 0, 0);
+    }
+}
+
+@keyframes imageDecreasing {
+    0% {
+        width: 25vw;
+        height: 25vh;
+        background-color: rgb(178, 54, 54);
+        border: 1px red;
+    }
+    50% {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(0, 0, 0);
+        border: 10px red;
+    }
+    100% {
+        width: 25vw;
+        height: 25vh;
+        background-color: rgb(178, 54, 54);
+        border: 1px red;
+    }
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -38,6 +90,22 @@ img {
     text-decoration: none;
     margin-left: 50px; /* BACK HERE TO ADJUST THE MARGIN */
 }
+
+.a_nav_header:hover{
+    animation-name: fontGrowing;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: .0000001s;
+    animation-iteration-count: infinite;
+}
+
+h1:hover {
+    animation-name: titleEmphasis;
+    animation-duration: .1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: .0000001s;
+    animation-iteration-count: infinite;
+} 
 
 .a_nav_header:hover {
     background-color: rgb(240, 221, 221);
@@ -99,6 +167,14 @@ img {
     object-fit: cover;
     justify-self: end;
     margin-left: 5vw;
+}
+
+#second_main_section_img_two:hover {
+    animation-name: imageDecreasing;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: .0000001s;
+    animation-iteration-count: 1;
 }
 
 #third_main_section {
