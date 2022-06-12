@@ -94,22 +94,6 @@
     border: 1px red;
   }
 }
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
-body {
-  min-height: 100vh;
-  place-items: center;
-  width: 100%;
-}
-
-img {
-  width: 100%;
-}
-
 #page_header {
   display: grid;
   min-height: 50px;

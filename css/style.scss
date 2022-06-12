@@ -57,66 +57,7 @@ $second_color_animation_title: white;
 }
 
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-body {
-    min-height: 100vh;
-    place-items: center;
-    width: 100%;
-    
-}
-
-img {
-    width: 100%;
-}
-
-#page_header {
-    display: grid;
-    min-height: 50px;
-    grid-auto-flow: column;
-    align-items: center;
-    justify-items: center;
-    margin-top: 10px;
-}
-
-#img_header {
-    width: 45px;
-    height: 45px;
-    object-fit: cover;
-    border-radius: 22.5px;
-    margin-left: 15px;
-    justify-self: start;
-}
-
-.a_nav_header {
-    color: black;
-    text-decoration: none;
-    margin-left: 50px; /* BACK HERE TO ADJUST THE MARGIN */
-}
-
-.a_nav_header:hover{
-    animation-name: fontGrowing;
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
-    animation-delay: .0000001s;
-    animation-iteration-count: infinite;
-}
-
-h1:hover {
-    animation-name: titleEmphasis;
-    animation-duration: .1s;
-    animation-timing-function: ease-in-out;
-    animation-delay: .0000001s;
-    animation-iteration-count: infinite;
-} 
-
-.a_nav_header:hover {
-    background-color: rgb(240, 221, 221);
-}
+@use "header";
 
 #main_page_header {
     display: grid;
