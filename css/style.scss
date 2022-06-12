@@ -1,0 +1,401 @@
+$first_color_animation_nav: rgb(126, 58, 58);
+$second_color_animation_nav: rgb(150, 126, 55);
+$third_color_animation_nav: rgb(30, 30, 65);
+
+$first_color_animation_title: black;
+$second_color_animation_title: white;
+
+@keyframes fontGrowing {
+    0% {
+        font-size: 30px;
+    background-color: $first_color_animation_nav;
+    }
+    50% {
+        font-size: 30px;
+    background-color: $second_color_animation_nav;
+    }
+    100% {
+        font-size: 30px;
+    background-color: $third_color_animation_nav;
+    }
+}
+
+@keyframes titleEmphasis {
+    0% {
+        font-size: 30px;
+        background-color: $first_color_animation_title;
+    }
+    50% {
+       font-size: 30px;
+       background-color: $second_color_animation_title;
+    }
+    100% {
+      font-size: 30px;
+      background-color: $first_color_animation_title;
+    }
+}
+
+@keyframes imageDecreasing {
+    0% {
+        width: 25vw;
+        height: 25vh;
+        background-color: rgb(178, 54, 54);
+        border: 1px red;
+    }
+    50% {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(0, 0, 0);
+        border: 10px red;
+    }
+    100% {
+        width: 25vw;
+        height: 25vh;
+        background-color: rgb(178, 54, 54);
+        border: 1px red;
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    place-items: center;
+    width: 100%;
+    
+}
+
+img {
+    width: 100%;
+}
+
+#page_header {
+    display: grid;
+    min-height: 50px;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-items: center;
+    margin-top: 10px;
+}
+
+#img_header {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 22.5px;
+    margin-left: 15px;
+    justify-self: start;
+}
+
+.a_nav_header {
+    color: black;
+    text-decoration: none;
+    margin-left: 50px; /* BACK HERE TO ADJUST THE MARGIN */
+}
+
+.a_nav_header:hover{
+    animation-name: fontGrowing;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: .0000001s;
+    animation-iteration-count: infinite;
+}
+
+h1:hover {
+    animation-name: titleEmphasis;
+    animation-duration: .1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: .0000001s;
+    animation-iteration-count: infinite;
+} 
+
+.a_nav_header:hover {
+    background-color: rgb(240, 221, 221);
+}
+
+#main_page_header {
+    display: grid;
+    grid-auto-flow: row;
+    justify-items: center;
+    align-items: center;
+}
+
+#first_main_section {
+    background-image: url(/img/pexels-photo-905847.webp);
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    margin-top: 20px;
+
+    >p {
+          margin-top: 20px;
+    }
+}
+
+/*
+#first_main_section_img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    margin-top: 20px;
+}*/
+
+#first_main_section_h1 {
+    display: grid;
+    grid-auto-flow: row;
+    margin-top: 20px;
+    align-items: center;
+    justify-items: center;
+    padding: 20px;
+}
+
+#second_main_section {
+    display: grid;
+    grid-auto-flow: column;
+    margin-top: 20px;
+}
+
+#second_main_section_img_one {
+    width: 30vw;
+    height: 70vw;
+    object-fit: cover;
+    margin-top: 50px;
+} 
+
+#second_main_section_img_two {
+    width: 60vw;
+    height: 70vh;
+    object-fit: cover;
+    justify-self: end;
+    margin-left: 5vw;
+}
+
+#second_main_section_img_two {
+    &:hover {
+    animation-name: imageDecreasing;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: .0000001s;
+    animation-iteration-count: 1;
+    }
+}
+
+#third_main_section {
+    background-image: url(/img/chef-pizza.webp);
+    height: 90vh;
+    width: 95vw; /*why using the its still scrolling? */
+    background-position: center;
+    display: grid;
+    grid-auto-flow: row;
+    justify-content: start;
+    align-items: start;
+    background-size: cover;
+    margin-top: 150px;
+    border-radius: 300px;
+
+    >div>h1 {
+        margin-top: -75px;
+    border: 2px solid; 
+    border-color: #f00 rgb(255, 255, 255) #f00 rgb(255, 255, 255); 
+    padding: 5px;
+    margin-left: 8px;
+    }
+}
+
+#fourth_main_section {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-items: center;
+    column-gap: 15px;
+}
+
+.fourth_main_section_div {
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 10px;
+    align-items: center;
+    justify-items: center; /* Why again my p dont centralize?*/
+    border: 5px solid; 
+    border-color: rgb(255, 255, 255) rgb(255, 255, 255) #f00 rgb(255, 255, 255); 
+    background-color: rgb(240, 221, 221);
+    width: 90px;
+    border-radius: 10px;
+    padding: 2px;
+    margin-top: -50px;
+}
+
+
+/*
+#second_main_section_div_one {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    align-items: center;
+    justify-items: end;
+    background-color: rgb(240, 221, 221);
+    height: 100px;
+} 
+
+#second_main_section_div_two {
+    height: 100px;
+    margin-bottom: 50px;
+}
+
+
+
+#third_main_section_h1 {
+    border: 2px solid; 
+    border-color: #f00 rgb(255, 255, 255) #f00 rgb(255, 255, 255); /
+    padding: 5px;
+}
+
+#third_main_section_img {
+    height: 500px;
+    width: 500px;
+    object-fit: cover;
+    border-radius: 250px;
+    align-items: center;
+    justify-items: center;
+    margin-top: -50px;
+}
+
+#fourth_main_section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    justify-items: center;
+    align-items: center;
+    margin-top: -40px;
+}*/
+
+#second_footer_section {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 50px;
+}
+
+.second_footer_section_img {
+    height: 10vh;
+    object-fit: cover;
+    justify-self: end;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+#page_footer {
+    display: grid;
+    min-height: 30vh;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    margin-top: 50px;
+    background-color: rgb(244, 244, 244);
+    border-top: 2px solid; 
+    border-color: rgb(0, 0, 0) rgb(244, 244, 244) rgb(244, 244, 244) rgb(244, 244, 244); 
+}
+
+@media only screen and (min-width: 600px) {
+
+    #first_main_section {
+        display: grid;
+        grid-auto-flow: row;
+        align-items: center;
+        justify-items: center;
+    }
+
+    #second_main_section {
+        margin-top: 50px;
+    }
+
+    #first_main_section_h1
+    >p {
+        justify-self: center;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
+    #second_main_section_img_one {
+        width: 40vw;
+        height: 50vh;
+        object-fit: cover;
+        justify-self: end;
+        margin-top: 50px;
+    } 
+
+    #second_main_section_img_two {
+        width: 50vw;
+        height: 70vh;
+        object-fit: cover;
+        justify-self: end;
+        margin-left: 5vw;
+    }
+
+    #third_main_section {
+        height: 70vh;
+        width: 80vw; /*why using the vw its still scrolling? */
+    }
+
+    .fourth_main_section_div {
+        width: 15vw;
+    }
+
+    #page_footer {
+        height: 30vh;
+    }
+}
+
+@media only screen and (min-width: 1080px) {
+    #second_main_section_img_one {
+        width: 25vw;
+        height: 40vh;
+        object-fit: cover;
+        justify-self: start;
+        margin-right: 5vw;
+        margin-top: 50px;
+    } 
+
+    #second_main_section_img_two {
+        width: 45vw;
+        height: 70vh;
+    }
+
+    #img_header {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 30px;
+        margin-left: 20px;
+        justify-self: start;
+    }
+
+    #first_main_section_img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        margin-top: 20px;
+    }
+
+    #third_main_section {
+        height: 700px;
+        width: 50vw; 
+        background-position: start;
+    }
+
+    #fourth_main_section {
+        column-gap: 50px;
+    }
+
+    .fourth_main_section_div {
+        width: 150px;
+    }
+
+    #first_main_section {
+        height: 90vh;
+        background-position: center;
+    }
+    
+}
